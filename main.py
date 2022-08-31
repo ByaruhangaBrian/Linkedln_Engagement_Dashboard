@@ -8,13 +8,14 @@ from datetime import datetime
 import streamlit.components.v1 as components
 import altair as alt
 
+
 def main_page():
-    col1, mid, col2 = st.columns([1,2,20])
+    col1, mid, col2 = st.columns([1, 2, 20])
     with col1:
         st.image(os.path.abspath("images/LI Logo.png"), width=100)
     with col2:
         st.write("# LinkedIn Engagement")
-#     the Sidebar
+    #     the Sidebar
     st.sidebar.markdown("# LinkedIn Engagement")
     st.sidebar.markdown("** Created By Brian Byaruhanga **")
     st.sidebar.markdown("##")
@@ -352,10 +353,12 @@ def page3():
     st.markdown("This file provides the data necessary for plotting.")
 
     st.markdown(
-        "Follow the instructions at this [link](https://www.linkedin.com/help/linkedin/answer/a701208) to download this file. This is the file that has a name of the form **{Year}_{Your Name}.xlsx**.")
+        "Follow the instructions at this [link](https://www.linkedin.com/help/linkedin/answer/a701208) to download "
+        "this file. This is the file that has a name of the form **{Year}_{Your Name}.xlsx**.")
 
     st.markdown(
-        "**Note:** this dashboard can be used with only this file if you choose. It is optional to upload your Shares file, but you won't be able to click through to posts from the chart.")
+        "**Note:** this dashboard can be used with only this file if you choose. It is optional to upload your Shares "
+        "file, but you won't be able to click through to posts from the chart.")
 
     st.subheader("Download Shares Data (Optional)")
 
@@ -377,9 +380,11 @@ def page3():
         "In the meantime, you can play around with the readily obtainable engagements & impressions data from "
         "LinkedIn! Instructions above.")
 
-    page_names_to_func = {"LinkedIn Engagements":main_page,
-                      "Your Dashboard": page2,
-                      "Data Directions": page3}
+    page_names_to_funcs = {
+        "LinkedIn Engagement": main_page,
+        "Your Dashboard": page2,
+        "Data Directions": page3
+    }
 
-    selected_page = st.sidebar.selectbox("Select a page", page_names_to_func.keys())
-    page_names_to_func[selected_page]()
+    selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+    page_names_to_funcs[selected_page]()
