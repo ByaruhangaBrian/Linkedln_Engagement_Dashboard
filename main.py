@@ -39,11 +39,9 @@ def main_page():
     st.markdown("**Click** on any data point and **you're brought to that post's link!**")
 
 
-page_names_to_func = {"LinkedIn Engangements":main_page,
-                      "Your Dashboard": page2,
-                      "Data Directions": page3}
-
-selected_page = st.sidebar.selectbox("Select a page", page_names_to_func.keys())
-page_names_to_func[selected_page]()
-
-
+# page_names_to_func = {"LinkedIn Engangements":main_page,
+#                       "Your Dashboard": page2,
+#                       "Data Directions": page3}
+#
+# selected_page = st.sidebar.selectbox("Select a page", page_names_to_func.keys())
+# page_names_to_func[selected_page]()
