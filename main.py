@@ -9,9 +9,6 @@ import streamlit.components.v1 as components
 import altair as alt
 
 
-st.write(""" Testing """)
-
-
 def main_page():
     col1, mid, col2 = st.columns([1, 2, 20])
     with col1:
@@ -59,7 +56,9 @@ def page2():
 
     file1 = st.sidebar.file_uploader("Upload Engagements & Impressions File",
                                      type=["xlsx"],
-                                     help="This is the file that has a name of the form **{Year}_{Your Name}.xlsx**. You can download this by following the directions on the Data Directions page."
+                                     help="This is the file that has a name of the form **{Year}_{Your Name}.xlsx**. "
+                                          "You can download this by following the directions on the Data Directions "
+                                          "page. "
                                      )
 
     if file1 is not None:
@@ -84,7 +83,8 @@ def page2():
 
     file2 = st.sidebar.file_uploader("Upload Shares File",
                                      type=["csv"],
-                                     help="This is the Shares.csv file that you can obtain by following the directions on the Data Directions page."
+                                     help="This is the Shares.csv file that you can obtain by following the "
+                                          "directions on the Data Directions page. "
                                      )
 
     if file2 is not None:
@@ -331,8 +331,6 @@ def page2():
             theme='fresh',
             fit_columns_on_grid_load=True
         )
-
-
 
     except:
 
